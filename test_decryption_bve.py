@@ -27,7 +27,7 @@ def get_params():
                 result = cursor.fetchall()
                 for row in result:
                     inputs = row
-                    # print(row)     
+                    print(row)     
     except Error as e:
         print(e)
     # print(inputs)
