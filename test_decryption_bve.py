@@ -71,10 +71,10 @@ def write_csv_to_s3(config):
     print('end')
     print(datetime.now())
 
-with open('C:\\Users\\youssef.toomah\\Documents\\config.yaml') as f:
+with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 s = sched.scheduler(time.time, time.sleep)
-schedule.every().day.at("12:32").do(export_data,config)
+schedule.every().day.at("12:53").do(export_data,config)
 
 while True:
     schedule.run_pending()
